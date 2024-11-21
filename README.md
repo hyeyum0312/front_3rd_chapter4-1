@@ -92,7 +92,7 @@ GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행
 
 ### CloudFront와 CDN:
 
-<img src="/public/cdn.png" alt="배포다이어그램" width="200"/>
+<img src="/public/cdn.png" alt="배포다이어그램" width="500"/>
 
 <details>
   <summary>CDN (Content Delivery Network)</summary>
