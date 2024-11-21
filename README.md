@@ -92,6 +92,8 @@ GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행
 
 ### CloudFront와 CDN:
 
+![배포다이어그램](/public/cdn.png)
+
 <details>
   <summary>CDN (Content Delivery Network)</summary>
   - **CDN**은 **사용자에게 빠르게 콘텐츠를 전달**하기 위해 데이터를 여러 지역의 서버(엣지 서버)에 분산하여 캐시하고, **사용자에게 가장 가까운 서버**에서 콘텐츠를 제공하는 네트워크입니다.
