@@ -38,12 +38,14 @@ GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행
     <p>CI/CD는 코드 변경 사항을 빌드, 테스트, 배포까지 자동화하는 프로세스를 의미합니다.</p>
     </div>
   </details>
+
   <details>
     <summary>GitHub Actions란?</summary>
     <div markdown="1">
       <ul>
         <li>🟡  GitHub에서 제공하는 <strong>CI/CD 및 자동화 도구</strong>입니다. 코드의 빌드, 테스트, 배포 및 기타 작업을 자동화할 수 있습니다.</li>
-        <li>🟡 <strong>Workflow</strong>
+        <li>🟡 
+        <strong>Workflow: </strong>
           GitHub Actions에서 실행되는 하나 이상의 Job으로 구성된 자동화 프로세스입니다.
           <ul>
             <li>.github/workflows 디렉토리에 <strong>YAML 파일</strong>로 설정을 정의합니다.</li>
@@ -207,6 +209,7 @@ GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행
     ```
 
     Q. 민감한 정보를 GitHub Actions 워크플로에서 **secrets** 없이 코드나 `yml` 파일에 하드코딩하면 어떻게 될까요?
+
     A. 여러 보안 문제가 발생할 수 있습니다:
 
     1. **정보 노출**: 코드에 민감한 정보가 포함되면 누구나 이를 볼 수 있고, 공개 리포지토리에서 완전히 노출될 수 있습니다.
@@ -264,17 +267,21 @@ GitHub Actions에 워크플로우를 작성해 다음과 같이 배포가 진행
 ## TTFB(Time to First Byte)
 
 - TTFB(Time to First Byte)는 서버가 첫 번째 바이트를 응답하는 데 걸리는 시간입니다. **0.8초 이하**의 TTFB를 목표로 하면, 사용자가 빠르게 콘텐츠를 경험할 수 있습니다. 이는 **FCP**나 **LCP** 같은 주요 성능 지표가 원활하게 동작할 수 있도록 도와줍니다.
-  ![배포다이어그램](/public/TTFB.png)
+  ![배포다이어그램](/public/ttfb.png)
 - TTFB는 다음 요청 단계의 합계입니다.
   - 리디렉션 시간 / 서비스 워커 시작 시간(해당하는 경우)
   - DNS 조회 / 연결 및 TLS 협상 / 응답의 첫 번째 바이트가 도착할 때까지의 요청
 - 🟡 **S3**
-  **DNS Lookup:** 37.96 ms
+
+  **DNS Lookup:** 37.96 ms  
   **Waiting for server response:** 30.94 ms
+
   ![DNS Lookup -s3](/public/s33.png)
-- 🟡  **CloudFront**
-  **DNS Lookup:** 12.61 ms
+
+- 🟡  **CloudFront**  
+  **DNS Lookup:** 12.61 ms  
   **Waiting for server response:** 8.59 ms
+
   ![DNS Lookup -cf](/public/cf3.png)
 
 ---
